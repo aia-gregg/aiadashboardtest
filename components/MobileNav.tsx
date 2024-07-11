@@ -28,7 +28,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                     width={30}
                     height={30}
                     alt="menu"
-                    className="cursor-pointer"
+                    className="cursor-pointer brightness-[3] invert-0"
                 />
             </SheetTrigger>
             <SheetContent side="left" className="border-none bg-white">
@@ -37,9 +37,9 @@ const MobileNav = ({ user }: MobileNavProps) => {
                         src="/icons/logo.svg"
                         width={34}
                         height={34}
-                        alt="Horizon Logo"
+                        alt="AI Analysis Logo"
                     />
-                    <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
+                    <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">AI Analysis</h1>
                 </Link>
                 <div className="mobilenav-sheet">
                     <SheetClose asChild>

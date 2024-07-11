@@ -55,6 +55,8 @@ const config = {
         sky: {
           1: "#F3F9FF",
         },
+        yellow: "#F0B90C",
+        yellow2: "#dca803",
         black: {
           1: "#00214F",
           2: "#344054",
@@ -67,11 +69,14 @@ const config = {
           600: "#475467",
           700: "#344054",
           900: "#101828",
+          1000: "#202020",
+          2000: "#141414",
         },
       },
       backgroundImage: {
         "bank-gradient": "linear-gradient(90deg, #0179FE 0%, #4893FF 100%)",
-        "gradient-mesh": "url('/icons/gradient-mesh.svg')",
+        "aia-gradient": "linear-gradient(90deg, #F0B90C 0%, #D9A503 100%)",
+        "gradient-mesh": "url('/icons/topbanner.jpg')",
         "bank-green-gradient":
           "linear-gradient(90deg, #01797A 0%, #489399 100%)",
       },

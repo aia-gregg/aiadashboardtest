@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Footer from './Footer'
+import PlaidLink from './PlaidLink'
 
 const Sidebar = ({ user }: SiderbarProps) => {
   const pathname = usePathname();
@@ -18,10 +19,10 @@ const Sidebar = ({ user }: SiderbarProps) => {
                     src="/icons/logo.svg"
                     width={34}
                     height={34}
-                    alt="Horizon Logo"
+                    alt="AI Analysis Logo"
                     className="size-[24px] max-xl:size-14"
                 />
-                <h1 className="sidebar-logo">Horizon</h1>
+                <h1 className="sidebar-logo">AI Analysis</h1>
             </Link>
 
             {sidebarLinks.map((item) => {
@@ -29,27 +30,27 @@ const Sidebar = ({ user }: SiderbarProps) => {
 
                 return (
                     <Link href={item.route} key={item.label}
-                        className={cn('sidebar-link', {'bg-bank-gradient':isActive})}
+                        className={cn('sidebar-link', {'bg-aia-gradient':isActive})}
                     >
                         <div className="relative size-6">
                             <Image 
                                 src={item.imgURL}
                                 alt={item.label}
                                 fill
-                                className={cn({
-                                    'brightness-[3] invert-0': isActive
+                                className={cn('brightness-[3] invert-0', {
+                                    'brightness-[0]': isActive
                                 })}
                             />
                         </div>
                         <p className={cn('sidebar-label',{
-                            '!text-white' :isActive
+                            '!text-black-2' :isActive
                         })}>
                             {item.label}
                         </p>
                     </Link>
                 )
             })}
-            USER
+            <PlaidLink user={user} />
         </nav>
         <Footer user={user} />
     </section>
