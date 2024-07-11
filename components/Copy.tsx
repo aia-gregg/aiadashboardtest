@@ -3,11 +3,11 @@ import { useState } from "react";
 
 import { Button } from "./ui/button";
 
-const Copy = ({ title }: { title: string }) => {
+const Copy = ({ title }: { title: string | undefined }) => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(title);
+    navigator.clipboard.writeText(title as string);
     setHasCopied(true);
 
     setTimeout(() => {

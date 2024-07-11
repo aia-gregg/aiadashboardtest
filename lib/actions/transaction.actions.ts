@@ -47,7 +47,7 @@ export const getTransactionsByBankId = async ({bankId}: getTransactionsByBankIdP
         );
 
         const transactions = {
-            total: senderTransactions.total + receiverTransactions,
+            total: senderTransactions.total + receiverTransactions.total,
             documents: [
                 ...senderTransactions.documents,
                 ...receiverTransactions.documents,

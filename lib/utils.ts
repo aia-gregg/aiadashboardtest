@@ -85,7 +85,7 @@ export const removeSpecialCharacters = (value: string) => {
 interface UrlQueryParams {
   params: string;
   key: string;
-  value: string;
+  value: string | undefined;
 }
 
 export function formUrlQuery({ params, key, value }: UrlQueryParams) {
